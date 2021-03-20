@@ -1,6 +1,6 @@
-require('./bootstrap');
-
 import { createApp } from "vue";
+import welcome from "./components/welcome";
+import bootstrap from 'bootstrap'
 
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
