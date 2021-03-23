@@ -15,61 +15,65 @@
 </head>
 
 <body class="antialiased">
+    <div id="app">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Recetas de cocina</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Recetas de cocina</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Page Content -->
-    <div class="container">
+        <!-- Page Content -->
+        <div class="container">
 
-        <!-- Jumbotron Header -->
-        <header class="jumbotron my-4">
-            <h1 class="display-3">¡Recetas de cocina!</h1>
-            <p class="lead">CRUD de recetas de cocina hecho con Laravel 8 y Vue.js 3 con Axios y Bootstrap 4.</p>
-        </header>
+            <!-- Jumbotron Header -->
+            <header class="jumbotron my-4">
+                <h1 class="display-3">¡Recetas de cocina!</h1>
+                <p class="lead">CRUD de recetas de cocina hecho con Laravel 8 y Vue.js 3 con Axios y Bootstrap 4.</p>
 
-        <!-- Page Features -->
-        <div class="row text-center">
+                <!-- Componenten Button y Modal para crear receta -->
+                <create_receta/>
 
-            <!-- Componente Card -->
-            <div id="app">
+            </header>
+
+            <!-- Page Features -->
+            <div class="row text-center">
+
+                <!-- Componente Card -->
                 <welcome/>
+
             </div>
+            <!-- /.row -->
 
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; {{ date('Y') }}</p>
         </div>
         <!-- /.container -->
-    </footer>
 
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; {{ date('Y') }}</p>
+            </div>
+            <!-- /.container -->
+        </footer>
+
+    </div>
     <script src="{{asset('js/app.js')}}" defer></script>
 </body>
 

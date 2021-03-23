@@ -1,5 +1,9 @@
 import { createApp } from "vue";
 import welcome from "./components/welcome";
+import create_receta from "./components/create_receta";
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
+import locale from 'element-plus/lib/locale/lang/es';
 import bootstrap from 'bootstrap'
 
 window.axios = require('axios');
@@ -15,5 +19,6 @@ if (token) {
 createApp({
     components: {
         welcome,
+        create_receta,
     }
-}).mount('#app');
+}).use(ElementPlus, {locale}).mount('#app');
