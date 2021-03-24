@@ -1,10 +1,10 @@
-import { createApp } from "vue";
+import {createApp} from "vue";
 import welcome from "./components/welcome";
 import create_receta from "./components/create_receta";
 import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import locale from 'element-plus/lib/locale/lang/es';
-import bootstrap from 'bootstrap'
+import bootstrap from 'bootstrap';
 
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -20,5 +20,24 @@ createApp({
     components: {
         welcome,
         create_receta,
+    },
+    data() {
+        return {
+            recetas: []
+        };
+    },
+    created() {
+        this.getDataRecetas();
+    },
+    methods: {
+        getDataRecetas() {
+            axios.get('/getDataRecetas').then(data => {
+                console.log(data.data);
+                this.recetas = data.data;
+            })
+        },
+        getEmitEvent(value){
+            this.getDataRecetas();
+        }
     }
 }).use(ElementPlus, {locale}).mount('#app');

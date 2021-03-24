@@ -57,6 +57,7 @@ class RecetasController extends Controller
         $receta->categoria_id = $request->receta['categoria'];
 
         $receta->save();
+
         foreach ($request->receta['ingredientes'] as $ingrediente) {
             $receta->ingredientes()->attach($receta->id, ['ingrediente_id'=>$ingrediente]);
         }
@@ -104,11 +105,12 @@ class RecetasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Receta $recetas
+     * @param \App\Models\Receta $receta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Receta $recetas)
+    public function destroy(Receta $receta)
     {
-        //
+        $receta->delete();
+        $receta->ingredientes()->detach();
     }
 }

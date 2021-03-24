@@ -12,7 +12,8 @@
 
         <el-form ref="form" :model="form" label-width="150px">
             <el-form-item label="Nombre de la receta">
-                <el-input v-model="form.nombre" placeholder="Nombre de la receta" clearable style="width: 50%"></el-input>
+                <el-input v-model="form.nombre" placeholder="Nombre de la receta" clearable
+                          style="width: 50%"></el-input>
             </el-form-item>
             <el-form-item label="Categoría">
                 <el-select v-model="form.categoria" placeholder="Selecciona una categoría">
@@ -51,6 +52,9 @@
 <script>
 export default {
     name: "create_receta",
+    emits: [
+        'addReceta',
+    ],
     data() {
         return {
             form: {

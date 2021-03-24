@@ -49,7 +49,7 @@
                 <p class="lead">CRUD de recetas de cocina hecho con Laravel 8 y Vue.js 3 con Axios y Bootstrap 4.</p>
 
                 <!-- Componenten Button y Modal para crear receta -->
-                <create_receta/>
+                <create_receta @add-receta="getEmitEvent"/>
 
             </header>
 
@@ -57,7 +57,7 @@
             <div class="row text-center">
 
                 <!-- Componente Card -->
-                <welcome/>
+                <welcome :recetas="recetas" @delete-receta="getEmitEvent"/>
 
             </div>
             <!-- /.row -->

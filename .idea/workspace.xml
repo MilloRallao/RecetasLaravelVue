@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="762b6d8f-202e-4fd0-8bad-dddbadb800d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/IngredienteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RecetasController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/RecetaResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Categoria.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Ingrediente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Receta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_212614_create_recetas_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_213525_create_ingredientes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_220555_receta_ingrediente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_21_024246_create_categorias_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/create_receta.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RecetasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RecetasController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/create_receta.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/create_receta.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -82,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616194663996</updated>
-      <workItem from="1616194665467" duration="54636000" />
+      <workItem from="1616194665467" duration="65272000" />
     </task>
     <servers />
   </component>

@@ -24,3 +24,4 @@ Route::get('/getDataCategorias', [CategoriaController::class, 'getData']);
 Route::get('/getDataIngredientes', [IngredienteController::class, 'getData']);
 Route::get('/getDataRecetas', [RecetasController::class, 'getData']);
 Route::post('/postDataCreateReceta', [RecetasController::class, 'store']);
+Route::delete('/deleteReceta/{receta}', [RecetasController::class, 'destroy']);

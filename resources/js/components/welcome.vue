@@ -1,4 +1,4 @@
-<template @addReceta="getDataRecetas">
+<template>
 
     <div v-for="receta in recetas" class="col-lg-4 col-md-6 mb-4">
         <div class="card">
@@ -13,10 +13,12 @@
             <div class="card-footer">
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col">
-                        <button type="button" class="btn btn-primary float-left">Editar <i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-primary float-left">Editar <i
+                            class="bi bi-pencil-square"></i></button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-danger float-right">Borrar <i class="bi bi-trash-fill"></i></button>
+                        <button @click="deleteReceta(receta)" type="button" class="btn btn-danger float-right">Borrar <i
+                            class="bi bi-trash-fill"></i></button>
                     </div>
                 </div>
             </div>
@@ -28,21 +30,20 @@
 <script>
 export default {
     name: "welcome",
-    data() {
-        return {
-            recetas: []
-        };
-    },
-    created() {
-        this.getDataRecetas();
-    },
-    methods:{
-        getDataRecetas() {
-            axios.get('/getDataRecetas').then(data => {
-                console.log(data.data);
-                this.recetas = data.data;
-            })
-        },
+    props: ['recetas'],
+    emits: [
+        'deleteReceta'
+    ],
+    methods: {
+        deleteReceta(receta) {
+            axios.delete('/deleteReceta/' + receta.id)
+                .then(response => {
+                    console.log(response.data);
+                    this.$emit('deleteReceta');
+                }).catch(error => {
+                console.log(error.response)
+            });
+        }
     }
 }
 </script>
